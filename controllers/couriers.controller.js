@@ -5,7 +5,8 @@ const courierControllerGet=function (req, res) {
     res.json({
         ok:true,
         message:'GET-Esta maniobra nos tomara 51 años,estoy en el controller.',
-        nombre,apellido
+        nombre,
+        apellido
     })
   }
 const courierControllerPost=function (req, res) {

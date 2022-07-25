@@ -6,6 +6,7 @@ class Server{
        this.app = express();
        this.port=process.env.PORT;
        this.couriersPath='/api/couriers';
+       this.usuariosPath='/api/usuarios';
 //Middlewares
 this.middlewares();
 // Rutas de mi aplication
@@ -23,6 +24,7 @@ this.routes();
    }
    routes(){
     this.app.use(this.couriersPath,require('../routes/couriers.route'));
+    this.app.use(this.usuariosPath,require('../routes/usuarios.route'));
       
    }
    listen(){
