@@ -1,9 +1,11 @@
-const {Router}=require('express');
-const { usuariosControllerGet } = require('../controllers/usuarios.controller');
- const router=Router();
+const { Router } = require('express');
+const router = Router();
+const { usuariosControllerGet, usuarioControllerPost } = require('../controllers/usuarios.controller');
 
 
- //obtener el GET
- router.get('/',usuariosControllerGet);
+//obtener el GET
+router.get('/', usuariosControllerGet);
+//obtener el POST
+router.post('/', usuarioControllerPost);
 
- module.exports=router;
+module.exports = router;
